@@ -1,0 +1,43 @@
+stages:
+  - validate
+  - plan
+  - apply
+
+variables:
+  TF_VERSION: "1.5.0"
+  TF_WORKSPACE: "default"
+  AWS_REGION: "us-east-1"
+  
+validate:
+  stage: validate
+  image:
+    name: hashicorp/terraform:${TF_VERSION}
+    entrypoint: [""]
+  script:
+    - terraform --version
+    - terraform init
+    - terraform validate
+
+plan:
+  stage: plan
+  image:
+    name: hashicorp/terraform:${TF_VERSION}
+    entrypoint: [""]
+  before_script:
+    - terraform init
+  script:
+    - terraform plan -out=tfplan
+  artifacts:
+    paths:
+      - tfplan
+
+apply:
+  stage: apply
+  image:
+    name: hashicorp/terraform:${TF_VERSION}
+    entrypoint: [""]
+  before_script:
+    - terraform init
+  script:
+    - terraform apply -auto-approve tfplan
+  when: manual
