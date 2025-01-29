@@ -105,7 +105,7 @@ resource "aws_instance" "web_server" {
               systemctl start fail2ban
 
               # Página HTML estática
-              echo '<h1>Bem-vindo ao meu servidor AWS configurado com Terraform!</h1>' > /var/www/html/index.html
+              echo '<h1>Bem-vindo ao meu servidor challenger TeamSoft</h1>' > /var/www/html/index.html
               systemctl restart nginx
               EOF
 }
