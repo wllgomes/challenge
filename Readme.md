@@ -1,11 +1,11 @@
-**AWS Infrastructure with Terraform
-**
-**Descrição
-**
+**AWS Infrastructure with Terraform**
+
+**Descrição**
+
 Este projeto configura uma infraestrutura completa na AWS utilizando Terraform. A infraestrutura inclui um servidor EC2 com Nginx para servir uma página web estática e um banco de dados RDS MySQL para suportar uma ferramenta de monitoramento.
 
-**Tecnologias utilizadas
-**
+**Tecnologias utilizadas**
+
 Terraform: Para gerenciar e provisionar a infraestrutura como código.
 
 AWS: Serviços utilizados incluem EC2, RDS, VPC, Subnet, Security Groups e Internet Gateway.
@@ -16,16 +16,16 @@ Nginx: Servidor web para hospedar uma página HTML estática.
 
 MySQL: Banco de dados utilizado no RDS.
 
-**Instalação e uso
-**
-**Pré-requisitos
-**
+**Instalação e uso**
+
+**Pré-requisitos**
+
 Terraform instalado na máquina local.
 
 Uma conta na AWS com as credenciais configuradas localmente (variáveis de ambiente AWS_ACCESS_KEY_ID e AWS_SECRET_ACCESS_KEY).
 
-**Passos para configurar a infraestrutura
-**
+**Passos para configurar a infraestrutura**
+
 Clone o repositório:
 
 git clone https://github.com/wllgomes/challenge.git
